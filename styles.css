@@ -1,0 +1,454 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
+  color: #000000;
+  background-color: white;
+}
+
+.container {
+  text-align: center;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.container > img {
+  width: 150px;
+  border-radius: 20px;
+}
+
+/* Header */
+header {
+  background: #333;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+header h1 {
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  text-align: center;
+  margin-top: 10px;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Banner */
+.banner {
+  position: relative;
+  background: url('imagens/Imagem do WhatsApp de 2025-01-30 à(s) 23.30.34_f8acd514.jpg') no-repeat center center/cover;
+  color: #fff;
+  text-align: center;
+  padding: 100px 0;
+}
+
+.banner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.74); /* Overlay preto com 74% de opacidade */
+}
+
+.banner .container {
+  position: relative;
+  z-index: 1; /* Garante que o texto fique acima do overlay */
+}
+
+.banner h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.banner p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.banner .btn {
+  background: #007BFF;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+/* Sobre Nós */
+.about {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  padding: 50px 0;
+  text-align: center;
+}
+
+.about h2 {
+  margin-bottom: 20px;
+}
+
+/* Serviços */
+.services {
+  background: #f4f4f4;
+  padding: 50px 0;
+  text-align: center;
+}
+
+.services h2 {
+  margin-bottom: 40px;
+}
+
+.service-list {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.service-item {
+  background: #000397;
+  color: white;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 5px;
+  width: 30%;
+  box-shadow: 0 0 10px rgb(0, 0, 0);
+}
+
+.service-item i {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+/* Parcerias */
+.partners {
+  padding: 50px 0;
+  text-align: center;
+}
+
+.partners h2 {
+  margin-bottom: 40px;
+}
+
+.partner-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.partner-item {
+  margin: 10px;
+}
+
+.partner-item img {
+  max-width: 150px;
+  height: auto;
+}
+
+/* Contato */
+.contact {
+  padding: 50px 0;
+  text-align: center;
+}
+
+.contact form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact input, .contact textarea {
+  width: 100%;
+  max-width: 500px;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.contact button {
+  background: #007BFF;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact button:hover {
+  background: #0056b3;
+}
+
+/* Rodapé */
+footer {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+}
+
+footer .social-links {
+  margin-top: 10px;
+}
+
+footer .social-links a {
+  color: #fff;
+  margin: 0 10px;
+  font-size: 1.2rem;
+}
+
+/* Animação de entrada das seções */
+section {
+  opacity: 0;
+  transition: opacity 0.6s ease-out;
+}
+
+section.animate {
+  opacity: 1;
+}
+
+/* Scroll suave */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .service-item {
+    width: 100%;
+  }
+.about{
+  font-size: 0.8em;
+}
+  .container > img {
+    width: 80px;
+  }
+
+  nav ul li {
+    margin: 0 8px;
+    font-size: 13px;
+  }
+  .partners{
+    width: 0 auto;
+    padding: 0;
+  }
+  .partner-item img {
+    max-width: 100px;
+  }
+}
+/* Blog */
+.blog {
+  padding: 50px 0;
+  text-align: center;
+}
+
+.blog-posts {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.post {
+  background: #fff;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 5px;
+  width: 30%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.post img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.post h3 {
+  margin: 15px 0;
+}
+
+.post p {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.post .btn {
+  background: #007BFF;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.post:hover {
+  transform: translateY(-10px);
+}
+
+@media (max-width: 768px) {
+  .post {
+    width: 100%;
+  }
+}
+/* Portfólio */
+.portfolio {
+  padding: 50px 0;
+  text-align: center;
+}
+
+.portfolio-projects {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.project {
+  background: #fff;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 5px;
+  width: 30%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.project img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.project h3 {
+  margin: 15px 0;
+}
+
+.project p {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.project:hover {
+  transform: translateY(-10px);
+}
+
+@media (max-width: 768px) {
+  .project {
+    width: 100%;
+  }
+}
+/* Equipe */
+.equipe {
+  padding: 50px 0;
+  text-align: center;
+}
+
+.team-members {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.member {
+  background: #007e62;
+  color: #000000;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 5px;
+  width: 30%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.726);
+  transition: transform 0.3s ease;
+}
+
+.member img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+.member h3 {
+  margin: 15px 0;
+}
+
+.member p {
+  font-size: 0.9rem;
+  color: #fffefe;
+}
+
+.member:hover {
+  transform: translateY(-10px);
+}
+
+@media (max-width: 768px) {
+  .member {
+    width: 100%;
+  }
+}
+/* Tecnologias */
+.tecnologias {
+  padding: 50px 0;
+  text-align: center;
+}
+
+.tech-list {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.tech-item {
+  background: #1b0058;
+  color: white;
+  
+  padding: 20px;
+  margin: 10px;
+  border-radius: 5px;
+  width: 30%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.tech-item i {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.tech-item h3 {
+  margin: 15px 0;
+}
+
+.tech-item p {
+  font-size: 0.9rem;
+  color: #e0d2d2;
+}
+
+.tech-item:hover {
+  transform: translateY(-10px);
+}
+
+  @media (max-width: 508px) {
+    .tech-item {
+      width: 100%;
+    }
+    .tech-item i {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+  }
